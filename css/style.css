@@ -1,0 +1,166 @@
+/* COMMINT */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* /COMMINT */
+
+#root {
+    position: relative;
+}
+
+div > .green {
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    position: absolute;
+    background-color: #009688;
+}
+
+div > .grey {
+    width: 100%;
+    height: 99vh;
+    z-index: 1;
+    display: inline-block;
+    background-color: #D9DBD4;
+}
+
+#chat {
+    width: 90%;
+    height: 90vh;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#left {
+    width:35%;
+    height: 100%;
+}
+
+.utente {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d6d6d6;
+    background-color: #eaeaea;
+}
+
+.utente > .avatar {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.utente > .avatar > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.utente > .avatar > h1 {
+    font-size: 15px;
+}
+
+.utente > .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ i {
+    margin: 0 10px;
+    color: #b1b1b1;
+}
+
+#notifiche {
+    background-color: #8edafc;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#notifiche i {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    font-size: 20px;
+    padding: 15px 10px;
+    line-height: 20px;
+    text-align: center;
+    background-size: contain;
+    color: #8edafc;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#notifiche div h2 {
+    font-size: 15px;
+    width: 100%;
+    float: left;
+}
+#notifiche div h3 {
+    font-size: 10px;
+    float: left;
+    color: #697485;
+    text-decoration: underline;
+}
+
+.bar {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #d6d6d6;
+}
+
+#search {
+    border: 1px solid #d6d6d6;
+}
+
+ul > .utente {
+    padding: 10px;
+}
+
+ul > .chat_box > img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+.chat_box {
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #d6d6d6;
+    background-color: white;
+    align-items: center;
+}
+
+#view_chat {
+    width:calc(100% - 35%);
+    height: 100%;
+}
+
+#id_udente {
+    height: 70px;
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+.chat_box h1{
+    font-size: 20px;
+}
+.chat_box p{
+    font-size: 10px;
+}
