@@ -99,9 +99,13 @@ var app = new Vue (
             },
             getLastChat : function(element) {
                 const textLast = this.contacts[element].messages.length-1;
-                console.log(textLast);
                 const text = this.contacts[element].messages[textLast].text ;
                 return text;
+            },
+            getLastData : function(element) {
+                const textLastData = this.contacts[element].messages.length-1;
+                const textData = this.contacts[element].messages[textLastData].date ;
+                return textData;
             }
         }
     }
