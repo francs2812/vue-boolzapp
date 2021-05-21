@@ -98,9 +98,10 @@ var app = new Vue (
                 return scr
             },
             getLastChat : function(element) {
-                indexMessages = element;
-                console.log(indexMessages);
-                return indexMessages
+                const textLast = this.contacts[element].messages.length-1;
+                console.log(textLast);
+                const text = this.contacts[element].messages[textLast].text ;
+                return text;
             }
         }
     }
