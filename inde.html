@@ -23,9 +23,9 @@
                         <h1>NomeUtente</h1>
                     </div>
                     <div class="buttons">
-                        <i class="fas fa-circle-notch"></i>
-                        <i class="fas fa-comment-alt"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="icons fas fa-circle-notch"></i>
+                        <i class="icons fas fa-comment-alt"></i>
+                        <i class="icons fas fa-ellipsis-v"></i>
                     </div>
                 </div>
                 <div id="notifiche" class="utente">
@@ -47,17 +47,39 @@
                     <li class="chat_box" 
                     v-for = "(element, index) in contacts"
                     >
-                        <img :src="getImage(element.avatar)" alt="">
-                        <h1>{{element.name}}</h1>
-                        <p> {{ contacts[getLastChat(index)].messages[2].text }} </p>
+                    <div style="padding: 10px;">
+                            <img class="img_contact" :src="getImage(element.avatar)" alt="">
+                            <h1>{{element.name}}</h1>
+                            <p> {{ contacts[getLastChat(index)].avatar }} </p>
+                    </div>
+                            <p>Lorem ipsum dolor sit amet.</p>
                         <!-- <p> {{ contacts[getLastChat(index)].messages[indexMessageShort].text }} </p> -->
                     </li>
                 </ul>
 
             </section>
             <div id="view_chat">
-                <div id="id_udente"></div>
-                <div class="conversation"></div>
+                <div id="id_utente">
+                    <div>
+                        <img class="img_contact" src="img/avatar_1.jpg" alt="">
+                        <h1>nome contatto</h1>
+                        <p>ultimo accesso</p>
+                    </div>
+                    <div style="text-align: end; line-height: 50px;">
+                        <i class="icons  fas fa-search"></i>
+                        <i class="icons fas fa-paperclip"></i>
+                        <i class="icons  fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+                <div id="conversation">
+                </div>
+
+                <div id="text_write">
+                    <i class="icons far fa-smile"></i>
+                    <div>scrivi un messaggio</div>
+                    <i class="icons fas fa-microphone"></i>
+                </div>
 
             </div>
             
