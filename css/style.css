@@ -207,5 +207,26 @@ ul > .utente {
     align-items: center;
 }
 
+#conversation {
+    padding: 15px;
+}
+
+.sent {
+    width: 50%;
+    padding: 10px;
+    margin: 50px;
+    float: left;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.received {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    background-color:rgb(36, 247, 8);
+}
+
 
 
