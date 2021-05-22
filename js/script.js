@@ -89,8 +89,8 @@ var app = new Vue (
                     ],
                 },
             ],
-            indexMessages: 0,
-            indexMessageShort:2,
+            indexChat: 0,
+            
         },
         methods:{
             getImage: function(element) {
@@ -102,11 +102,31 @@ var app = new Vue (
                 const text = this.contacts[element].messages[textLast].text ;
                 return text;
             },
+            getLastChatData : function(element) {
+                const dateLast = this.contacts[element].messages.length-1;
+                const date = this.contacts[element].messages[dateLast].date ;
+                return date;
+            },
             getLastData : function(element) {
                 const textLastData = this.contacts[element].messages.length-1;
                 const textData = this.contacts[element].messages[textLastData].date ;
                 return textData;
+            },
+            chatUser: function(index) {
+                if(this.indexChat != index){
+                    this.indexChat = index;
+                }
+                console.log(indexChat);
+            },
+            nameDisplayedChat : function(index) {
+                return this.contacts[index].name
+            },
+            getImageChat: function(element) {
+                image = this.contacts[element].avatar
+                scr = "img/avatar"+ image + ".jpg";
+                return scr
             }
+
         }
     }
 )
