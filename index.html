@@ -52,7 +52,7 @@
                             <h1>{{element.name}}</h1>
                             <p> {{ getLastChat(index) }} </p>
                     </div>
-                            <p> {{ getLastData(index) }} </p>
+                            <p style="margin: 10px;"> {{ getLastData(index) }} </p>
                         <!-- <p> {{ contacts[getLastChat(index)].messages[indexMessageShort].text }} </p> -->
                     </li>
                 </ul>
@@ -75,7 +75,7 @@
                 <div id="conversation"
                 >
                     <div v-for=" mesage in contacts[indexChat].messages "
-                         :class=" (mesage.status == 'sent')? 'sent':'received' "
+                         :class=" (mesage.status == 'sent')? 'received':'sent' "
                      > 
                      <p>{{mesage.text}} </p>
                      <span> {{mesage.date}} </span>
@@ -85,7 +85,7 @@
 
                 <div id="text_write">
                     <i class="icons far fa-smile"></i>
-                    <div>scrivi un messaggio</div>
+                    <div> <input v-model="text" @keydown.enter=" getText(indexChat) " type="text" placeholder="scrivi un messaggio">  </div>
                     <i class="icons fas fa-microphone"></i>
                 </div>
 

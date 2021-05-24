@@ -24,7 +24,7 @@ var app = new Vue (
                             date: '10/01/2020 16:15:22',
                             text: 'Tutto fatto!',
                             status: 'received'
-                        }
+                        },
                     ],
                 },
                 {
@@ -90,7 +90,7 @@ var app = new Vue (
                 },
             ],
             indexChat: 0,
-            
+            text: "",
         },
         methods:{
             getImage: function(element) {
@@ -125,7 +125,24 @@ var app = new Vue (
                 image = this.contacts[element].avatar
                 scr = "img/avatar"+ image + ".jpg";
                 return scr
+            },
+            getText: function(element) {
+                 Xmas95 = new Date();
+                 day = Xmas95.getDate();
+                 month = Xmas95.getMonth();
+                 year =  Xmas95.getYear();
+                 hours =  Xmas95.getHours();
+                 minutes =  Xmas95.getMinutes(element);
+                data = `${day} / ${month} / ${year} ${hours} : ${minutes}`;
+                message = {
+                            date: data,
+                            text: this.text,
+                            status: 'sent'
+                         } 
+                this.contacts[element].messages.push( message )
+                
             }
+
 
         }
     }
