@@ -137,12 +137,21 @@ var app = new Vue (
                 message = {
                             date: data,
                             text: this.text,
-                            status: 'sent'
-                         } 
+                            status: 'sent',
+                         }, 
                 this.contacts[element].messages.push( message )
-                
-            }
+                console.log(message);
+                setTimeout(() => {
+                    messageAnswer = {
+                        date: data,
+                        text: 'ok',
+                        status: 'received',
+                     },
+                     this.contacts[element].messages.push( messageAnswer )
+                }, 1000);
 
+                
+            },
 
         }
     }
