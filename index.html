@@ -41,10 +41,12 @@
                 <div id="search">
                     <div class="bar">
                         <i class="fas fa-search"></i>
+                        <input v-model="search"  @keydown.enter=" searchChat() " type="text">
                     </div>
                 </div>
                 <ul>
                     <li class="chat_box" 
+                    :class="(element.visible == false)? 'Invisible' : '' "
                     v-for = "(element, index) in contacts"
                     @click="chatUser(index)">
                     <div style="padding: 10px;">

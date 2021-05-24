@@ -91,6 +91,7 @@ var app = new Vue (
             ],
             indexChat: 0,
             text: "",
+            search:""
         },
         methods:{
             getImage: function(element) {
@@ -152,7 +153,19 @@ var app = new Vue (
 
                 
             },
-
+            searchChat:function() {
+                const letterUppercase = this.search.toUpperCase().charAt(0)
+                this.contacts.forEach(element => {
+                    element.visible = true;
+                    if (letterUppercase == 0) {
+                        element.visible = true;
+                    }else {
+                        if(letterUppercase != element.name.charAt(0)) {
+                        element.visible = false
+                    }
+                    console.log(element);}
+                });
+            }
         }
     }
 )
